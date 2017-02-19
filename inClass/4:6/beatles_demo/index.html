@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>Request Demo</title>
+    <link rel="stylesheet" type="text/css" href="/Users/dweikel/Documents/Web Dev/4:6/beatles_demo/css/style.css">
+</head>
+<body>
+    <div id="content">
+      <h1>Beatles Albums</h1>
+      <script type="text/html" id='albums'>
+       <table>
+         <thead>
+           <tr>
+             <th>Entertainer</th>
+             <th>Album</th>
+             <th>Release Date</th>
+           </tr>
+         </thead>
+         <tbody>
+           <% _.each(albums, function(album, key, list) { %>
+             <% var albumName = album.typ; %>
+             <tr>
+                <td><%= key %></td>
+                <td class="<%= albumName %>"><%= albumName %></td>
+                <td class="<%= albumName %>"><a href="<%= album.typ %>"><%= album.typ %></a></td>
+             </tr>
+           <% });%>
+         </tbody>
+       </table>
+     </script>
+     <div id="target"></div>
+     </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.1/underscore-min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

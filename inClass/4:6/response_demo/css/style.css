@@ -1,0 +1,17 @@
+body {
+  background-image: url('../images/owwk_0_enxy-eutah-mizushima.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  font-family: fantasy;
+  font-size: large;
+}
+
+h1, ol {
+  text-align: center;
+}
+
+ol {
+  list-style: none;
+}

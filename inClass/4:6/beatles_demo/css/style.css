@@ -1,0 +1,18 @@
+body {
+  background-image: url('/Users/dweikel/Documents/Web Dev/4:6/beatles_demo/images/background.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  font-family: impact;
+  font-size: large;
+}
+
+h1, h2, ol {
+  text-align: center;
+}
+
+
+ol {
+  list-style: none;
+}

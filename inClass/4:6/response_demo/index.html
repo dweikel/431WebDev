@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>Response Demo</title>
+    <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
+</head>
+<body>
+    <div id="content">
+      <h1>Dinosaurs</h1>
+      <!-- Option 1 or 2 -->
+      <ol id="dinosaurs"></ol>
+
+      <!-- Option 3 -->
+      <script type="text/html" id='dinosaurs'>
+        <table>
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Wikipedia URL</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% _.each(dinosaurs, function(dinosaur, key, list) { %>
+              <% var dinoName = dinosaur.nm; %>
+              <tr>
+                 <td><%= key %></td>
+                 <td class="<%= dinoName %>"><%= dinoName %></td>
+                 <td class="<%= dinoName %>"><a href="<%= dinosaur.url %>"><%= dinosaur.url %></a></td>
+              </tr>
+            <% });%>
+          </tbody>
+        </table>
+      </script>
+      <div id="target"></div>
+      </div>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.1/underscore-min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
